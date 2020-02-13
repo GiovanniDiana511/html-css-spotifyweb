@@ -126,7 +126,7 @@
 }
 
 .button-upgrade {
-    margin-right: 10px;
+    margin-right: 35px;
     height: 35px;
     padding: 0 25px;
     border: 1px solid white;
@@ -287,7 +287,7 @@
     width: 100%;
     margin-top: 15px;
     position: relative;
-    border-radius: 50%;
+    border-radius: 25%;
 }
 
 .bottom-right {
@@ -306,7 +306,7 @@
     border: 2px solid green;
     height: 2px;
     width: 100%;
-    border-radius: 50%;
+    border-radius: 25%;
 }
 
 .bottom-left2>i:hover {
@@ -322,4 +322,68 @@
 .bottom-right>i:hover {
     color: green;
     transform: scale(1.2);
+}
+
+@media screen and (max-width: 420px) {
+    .side-bar {
+        width: 50px;
+    }
+    .top-bar {
+        width: calc(100% - 50px);
+    }
+    .button-upgrade {
+    margin-right: 75px;
+    }
+    .container-right {
+        width: calc(100% - 50px);
+    }
+    .icon-big {
+        font-size: 25px;
+    }
+    #p-side {
+        display: none;
+    }
+    #profile {
+        border: none;
+    }
+    .bottom-left2 {
+        display: none;
+    }
+    .menu-top>a, .button-side>span {
+        display: none;
+    }
+    .button-side.app-profile>span {
+        display: none;
+    }
+    .bar-rip {
+        width: 80px;
+    }
+    .bottom-left>img {
+        height: 25px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 25px;
+    }
+    .bottom-right {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-right: 15px;
+        width: 140px;
+    }
+    .bar-vol {
+        margin-top: 15px;
+    }
+    .bar-rip:before {
+        position: absolute;
+        left: -40px;
+        top: 40%;
+        transform: translateY(-40%);
+    }
+    .bar-rip:after {
+        position: absolute;
+        right: -40px;
+        top: 40%;
+        transform: translateY(-40%);
+    }
 }
