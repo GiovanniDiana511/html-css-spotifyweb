@@ -70,6 +70,7 @@
 
 .button-side:hover {
     color: white;
+    cursor: pointer;
 }
 
 .icon {
@@ -106,6 +107,7 @@
 
 .link-side:hover {
     color: white;
+    cursor: pointer;
 }
 
 .container-right {
@@ -140,6 +142,7 @@
 
 .button-upgrade:hover {
     background-color: green;
+    cursor: pointer;
 }
 
 .main-content {
@@ -166,11 +169,13 @@
     font-size: 14px;
     text-transform: uppercase;
     transition: 0.5s;
+    border-bottom: 1px solid #0a1123;
 }
 
 .button-main:hover {
     color: white;
     border-bottom: 1px solid green;
+    cursor: pointer;
 }
 
 .text-main {
@@ -194,16 +199,33 @@
 
 .album {
     margin-right: 25px;
+    position: relative;
+    transition: 0.5s;
 }
 
 .image-album {
     border-radius: 10px;
     margin-top: 30px;
-    transition: 1s;
 }
 
-.image-album:hover {
-    filter: sepia(1);
+.overlay-img i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 82px;
+    color: white;
+    display: none;
+}
+
+.album:hover .overlay-img i{
+    display: block;
+    cursor: pointer;
+}
+
+.album:hover {
+    filter: sepia(0.3);
+    cursor: pointer;
 }
 
 .album-title {
@@ -252,6 +274,7 @@
     height: 50px;
     margin-left: 15px;
     margin-right: 15px;
+    border-radius: 5px;
 }
 
 .bottom-center {
@@ -312,16 +335,19 @@
 .bottom-left2>i:hover {
     color: green;
     transform: scale(1.2);
+    cursor: pointer;
 }
 
 .center-top>i:hover {
     color: green;
     transform: scale(1.2);
+    cursor: pointer;
 }
 
 .bottom-right>i:hover {
     color: green;
     transform: scale(1.2);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 420px) {
@@ -385,5 +411,12 @@
         right: -40px;
         top: 40%;
         transform: translateY(-40%);
+    }
+}
+
+@media screen and (max-height: 840px) {
+    .menu-side {
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 }
